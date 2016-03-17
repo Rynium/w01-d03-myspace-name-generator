@@ -1,20 +1,14 @@
-# You'll have to create your own method(s) here and define them. Use patterns like
-# you've seen elsewhere.
-
-require 'pry'
-
-#removes whitespace from a name and any punctuation, or capitol letters.
-#takes in a name with whitespace, returns name with no spaces and all lowercase.
-#
-
+#removes all lowercase letters
 def downcase(name)
   name.downcase
 end
 
+#removes all non-letter characters
 def remove_non_letters(name)
   alpha_name = name.gsub(/[^a-zA-Z]/, "")
 end
 
+#capitalizes ever other letters
 def cap_every_other(name)
   arr = name.split('')
   empty = []
@@ -26,10 +20,12 @@ def cap_every_other(name)
   empty.join('')
 end
 
+#prepends and appends names
 def prepend_append(name)
   'xX_'.concat(name).concat('_Xx')
 end
 
+#calls methods to change original name to final name.
 def name_generator(name)
   name = downcase(name)
   name = remove_non_letters(name)
