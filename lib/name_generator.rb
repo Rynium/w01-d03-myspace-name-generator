@@ -10,7 +10,7 @@ end
 
 #capitalizes ever other letters
 def cap_every_other(name)
-  arr = name.split('')
+  arr = name.split("")
   empty = []
   counter = 0
   arr.map do |x|
